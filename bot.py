@@ -42,6 +42,7 @@ async def stats(ctx, *args):
         rdict = json.loads(r.text)
         response = rdict['Countries']
         countrieslist = ""
+        countrystats = {}
         for i in response:  #  loop through API response to find correct country
             countrieslist += '\n' + i['Country'].lower()
             if i['Country'].lower() == country:
